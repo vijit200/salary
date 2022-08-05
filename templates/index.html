@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary</title>
+</head>
+<body>
+    <div style="color: orangered;">
+        <h1>Greater than 50K or not</h1>
+        <form action="{{ url_for('predict')}}" method="POST">
+            <input type="text" name="age" id="p" placeholder="age">
+            <br>
+            <input type="text" name="education" id="h" placeholder="education">
+            <br>
+            <input type="text" name="relationship" id="b" placeholder="relationship">
+            <br>
+            <input type="text" name="capital_gain" id="r" placeholder="capital_gain">
+            <br>
+            <input type="text" name="hours_per_week" id="st" placeholder="hours_per_week">
+            <br>
+            <hr>
+            <button type="submit" id="sub">
+                <b>
+                    Predict Survived Or Not
+                </b>
+                </button>
+        </form>
+
+    </div>
+    <br><br>
+    <b>
+        <i>
+            Survived : {{predection_eval}}
+        </i>
+    </b>
+    <hr>
+    <a href="https://github.com/vijit200/salary" target="_main">
+        <img src="https://www.bing.com/th?id=OIP.NGIDdVP6vw9ue_D-mrEVFQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2" alt="vijit_github" width="40px">
+    </a>
+</body>
+</html>
